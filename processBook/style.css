@@ -1,0 +1,473 @@
+@font-face {
+  font-family:myFont;
+  src: url(ZCOOLQingKeHuangYou-Regular.ttf);
+}
+
+body {
+  background-color: #fff;
+  position: static;
+  cursor: crosshair;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.char { transition: color .0s; transition-delay: 5s}
+
+.char:hover { transition-delay: .0s}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: table; 
+}
+
+section.sectionOne{
+  background-color: #fff;
+}
+
+section.sectionTwo{
+  background-color: #000;
+}
+
+section.sectionThree{
+  background-color: #fff;
+  text-align:center;
+}
+
+section.sectionFour{
+  background-color: #000;
+}
+
+
+section.sectionFive{
+  background-color: #fff; 
+}
+
+section.sectionSix{
+  background-color: #000;
+}
+
+section.sectionSeven{
+  background-color: #fff;
+}
+
+section.sectionEight{
+  background-color: #000;
+}
+
+section.sectionNine{
+  background-color: #fff;
+}
+
+section.sectionTen{
+  background-color: #000;
+}
+
+section.sectionEleven{
+  background-color: #fff;
+}
+
+#title{
+  width: 100%;
+  font-family: myFont;
+  font-size: 13em;
+  text-align: center;
+  margin-top: 5%;
+  line-height:1;
+}
+
+#first{
+  width: 100%;
+  font-family: myFont;
+  color: #fff;
+  font-size: 10em;
+  text-align: center;
+  line-height:1;
+  margin-top: 5%;
+}
+
+:root {
+  --gutter: 5px;
+}
+
+.hs {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-rows: minmax(150px, 1fr);
+  padding: 0 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
+
+
+.hs > li,
+.item {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#horizontalImage{
+  width: 100%;
+}
+
+#second{
+  width: 100%;
+  margin-top: 5%;
+  font-family: myFont;
+  font-size: 10em;
+  text-align: center;
+  line-height:1;
+}
+
+#cursorOne{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  display: inline-block;
+  cursor: url(BigHand.cur), progress !important;
+}
+
+#cursorTwo{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(ComputerMouse.cur), progress !important;
+}
+
+#cursorThree{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(text.cur), progress !important;
+}
+
+#cursorFour{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(Blue.cur), progress !important;
+}
+
+#cursorFive{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(my.cur), progress !important;
+}
+
+#cursorSix{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(photoshop.cur), progress !important;
+}
+
+#cursorSeven{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(Arrow.cur), progress !important;
+}
+
+#cursorEight{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(green.cur), progress !important;
+}
+
+#cursorNine{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(link.cur), progress !important;
+}
+
+#cursorTen{
+  width: 7%;
+  height:100px;
+  background-color: black;
+  margin-top: 5%;
+  margin-left: 1%;
+  display: inline-block;
+  cursor: url(largest.cur), progress !important;
+}
+
+
+#third{
+  width: 50%;
+  font-family: myFont;
+  color: #fff;
+  font-size: 10em;
+  text-align: center;
+  line-height:1;
+  margin-top:5%;
+  filter:blur(10px);
+  margin-left: 25%;
+}
+
+#third:hover{
+  text-shadow: 0 0 30px white, 0 0 50px blue;
+  font-size:18em;
+  text-align:center;
+  cursor: pointer;
+  color: black;
+  filter:blur(0px);
+}
+
+
+#four{
+  width: 100%;
+  font-family: myFont;
+  font-size: 10em;
+  text-align: center;
+  margin-top: 0%;
+  line-height:1;
+}
+
+#fourTwo{
+  width: 20%;
+  font-family: myFont;
+  font-size: 6em;
+  margin-left: 10%;
+  margin-top: 0%;
+  line-height:1;
+}
+
+#fourThree{
+  width: 20%;
+  font-family: myFont;
+  font-size: 6em;
+  margin-left: 70%;
+  margin-top: 7%;
+  line-height:1;
+}
+
+#fourFour{
+  width: 20%;
+  font-family: myFont;
+  font-size: 6em;
+  margin-left: 10%;
+  margin-top: 10%;
+  line-height:1;
+}
+
+
+
+#five{
+  width: 100%;
+  font-family: myFont;
+  font-size: 10em;
+  text-align: center;
+  margin-top: 5%;
+  line-height:1;
+}
+
+
+#eight{
+  width: 100%;
+  font-family: myFont;
+  font-size: 10em;
+  text-align: center;
+  margin-top: 5%;
+  line-height:1;
+  color: #fff;
+}
+
+#text-split{
+  width: 100%;
+  font-family: Helvetica;
+  font-size: 2em;
+  padding:5%;
+  letter-spacing: -0.02em;
+  line-height:1;
+  margin-top: 7%;
+}
+
+#six{
+  width: 100%;
+  font-family: myFont;
+  font-size: 10em;
+  color: #fff;
+  text-align: center;
+  line-height:1;
+  padding: 3%;
+}
+
+#mydiv {
+  position: absolute;
+  z-index: 9;
+  width:30%;
+  left: 10%;
+}
+
+#mydivheader {
+  padding: 5%;
+  cursor: move;
+  z-index: 10;
+  margin-top: 10%;
+
+}
+
+#mydiv2 {
+  position: absolute;
+  z-index: 9;
+  width:30%;
+  left: 20%;
+}
+
+#mydiv2header {
+  padding: 5%;
+  cursor: move;
+  z-index: 10;
+  margin-top: 10%;
+}
+
+
+#mydiv3 {
+  position: absolute;
+  z-index: 9;
+  width:30%;
+  left: 30%;
+}
+
+#mydiv3header {
+  padding: 5%;
+  cursor: move;
+  z-index: 10;
+  margin-top: 10%;
+}
+
+#mydiv4 {
+  position: absolute;
+  z-index: 9;
+  width:30%;
+  left: 40%;
+}
+
+#mydiv4header {
+  padding: 5%;
+  cursor: move;
+  z-index: 10;
+  margin-top: 10%;
+}
+
+#mydiv5 {
+  position: absolute;
+  z-index: 9;
+  width:30%;
+  left: 50%;
+}
+
+#mydiv5header {
+  padding: 5%;
+  cursor: move;
+  z-index: 10;
+  margin-top: 10%;
+}
+
+
+#mydiv6 {
+  position: absolute;
+  z-index: 9;
+  width:30%;
+  left: 60%;
+}
+
+#mydiv6header {
+  padding: 5%;
+  cursor: move;
+  z-index: 10;
+  margin-top: 10%;
+}
+
+#mydiv7 {
+  position: absolute;
+  z-index: 9;
+  width:30%;
+  left: 70%;
+}
+
+#mydiv7header {
+  padding: 5%;
+  cursor: move;
+  z-index: 10;
+  margin-top: 10%;
+}
+
+
+#videoElement {
+  width: 100%;
+  height: 15%;
+  opacity: 1;
+  -webkit-filter: blur(50px);
+  z-index: -1;
+}
+
+
+#text{
+  color: #fff;
+  z-index: 10;
+  font-family: myFont;
+  font-size: 10em;
+  margin-top: 0%;
+  margin-left: 35%;
+}
+
+.grid-container {
+  margin-top: 7%;
+  margin-left: 7%;
+  display: grid;
+  grid-gap: 50px 50px;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10%;
+  background-color:#000;
+  padding: 10px;
+}
+.grid-item {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizer</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<h1>In the browser console:<br>
+  toggleBeat(time,frequency,shape,override(true))<br>
+stopAudio(x)<br>
+stopLast()<br>
+stopAll()</h1>
+<div id="container">
+  <video autoplay="true" id="videoElement">
+  </video>
+</div>
+
+<script type="text/javascript">
+      let ac = new AudioContext()
+      let kickIntervals = [ ], 
+        beatIntervals = [ ]
+
+      let beatplaying = false
+
+
+      let playNote = ( frequency, shape ) => {
+        o1 = ac.createOscillator()
+        o1.type = shape
+        o1.frequency.value = frequency
+
+        g = ac.createGain()
+        g.gain.setValueAtTime(0,0)
+        g.gain.linearRampToValueAtTime(0.5, ac.currentTime + 0.5)
+        g.gain.linearRampToValueAtTime(0, ac.currentTime + 0.5)
+
+        o1.connect(g).connect(ac.destination)
+        o1.start()
+      }
+
+
+      let toggleBeat = ( time, frequency, shape, override = false ) => {
+        beatplaying = ( !beatplaying || override )
+        
+        if ( !override ) {
+          clearInterval( beatIntervals.pop( ) )
+          clearInterval( kickIntervals.pop( ) )
+        }
+        
+        if ( beatplaying ) {
+          beatIntervals.push( setInterval( playNote, time, frequency, shape ) )
+          kickIntervals.push( setInterval( playNote, time * 4 , frequency * 4, shape ) )
+        }
+      }
+      
+      let stopAudio = ( index ) => {
+        clearInterval( beatIntervals[ index - 1 ] )
+        clearInterval( kickIntervals[ index - 1 ] )
+      }
+      
+      let stopLast = ( ) => {
+        clearInterval( beatIntervals.pop( ) )
+        clearInterval( kickIntervals.pop( ) )
+      }
+
+      let stopAll = ( ) => {
+        while ( beatIntervals.length > 0 ) 
+          clearInterval( beatIntervals.pop( ) )
+
+        while ( kickIntervals.length > 0 ) 
+          clearInterval( kickIntervals.pop( ) )
+      }
+    </script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
